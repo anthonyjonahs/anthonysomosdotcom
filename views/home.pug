@@ -1,0 +1,66 @@
+extends layout.pug
+include ./mixins/ResumeEntry.pug
+include ./mixins/ResumeSection.pug
+
+append content
+	.jumbotron.jumbotron-fluid.pb-3.pt-3
+		.container
+			.row
+				.col-md-2.text-center
+					img.img-fluid.rounded-circle(src="https://unsplash.it/200")
+				.col-md-10.d-flex
+					div.align-self-center
+						h1.display-3 Anthony Somos
+						p.lead Full-Stack Web Developer
+	.container
+		.row
+			.col-md-6
+				//- Blurb
+				p.text-justify I am a full-stack JavaScript developer. After graduating from university I started a software marketplace for structural engineers. I learnt web development so that my company could survive, but along the way I became a passionate developer. Over the last six months I have gone from almost no experience to being proficient in Node, React, and MongoDB. For static websites, I have a lot of experience with server-rendered Pug. My favourite kinds of work include data ETL, writing elegant APIs, asynchronous code using newer ES6 syntax, and UI development with React.
+				br
+
+				//- Education Section
+				+ResumeSection(	'Education')
+				+ResumeEntry(		'Bachelor of Civil Engineering, Minor Economics',
+												'McGill University, 2010 - 2014')
+				br
+				
+				//- Work Experience Section
+				+ResumeSection('Work')
+				+ResumeEntry(	'Founder and Web-Developer',
+											'Eng-Base, 2015 – 2017')
+				+ResumeEntry(	'Childrens Sports Coach',
+											'Sportball, 2012 – Present',
+											'Coach children between 16 months and 12 years old in a bilingual sports education program designed to promote physical and mental development in a non-competitive environment.')
+				+ResumeEntry(	'Building Inspector for Seismic Risk',
+											'McGill University, 2012',
+											'Worked with city officials on a project aimed at assessing the seismic vulnerability of Montréal’s emergency infrastructure.')
+				
+				//- Spoken Languages Section
+				+ResumeSection('I can speak')
+				+ResumeEntry('English, French, and Spanish.')
+				
+				//- Interests Section
+				+ResumeSection('Stuff I do on my free time')
+				+ResumeEntry('Coach little kids on weekends, play guitar, run, and code.')
+			
+			.col-md-6
+				//- Projects Section
+				+ResumeSection('Projects')
+				+ResumeEntry(	'Eng-Base.com',
+											'Software marketplace for structural engineers.',
+											null,
+											['Front-end: Pug, Bootstrap.','Back-end: Node/Express, MongoDB.','My favourite part: Heavy modularization with Pug mixins.'])
+				+ResumeEntry(	'CloudTrials App',
+											'A single page app where users could try PC-based software in their browser without installation.',
+											null,
+											['Front-end: React/Flux, Victory.js (data viz), Bootstrap.','Back-end: Node/Express, MongoDB, mySQL/Knex.','My favourite part: integrating app w/ third-party virtualization API to render a desktop in the browser - we blew some peoples\' minds with that!'])
+				+ResumeEntry(	'Invoicer',
+											'Web app for bulk emailing invoices to customers.',
+											null,
+											['Front-end: React/Flux, Semantic-UI','Back-end: Node/Express, MongoDB/Mongoose.','My favourite part: Transforming uploaded CSV to array of JSON with keys mapped to correct columns'])
+				
+				+ResumeSection('More Details')
+				.container.text-center
+					a.btn.btn-outline-primary.btn-lg.btn-block(href='https://linkedin.com/in/anthony-somos-b475032b' target='_blank') LinkedIn
+					a.btn.btn-secondary.btn-lg.btn-block(href='https://github.com/anthonyjonahs' target='_blank') GitHub

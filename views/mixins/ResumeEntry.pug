@@ -1,0 +1,12 @@
+mixin ResumeEntry(title, subtitle, caption, list )
+	if title
+		p.lead.mb-0 !{title}
+	if subtitle
+		p.mb-0 !{subtitle}
+	if caption
+		p.small.mb-0 !{caption}
+	if list
+		ul.small.mb-0
+			each item in list
+				li !{item}
+	br
