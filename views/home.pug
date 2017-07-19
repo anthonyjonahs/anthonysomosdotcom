@@ -7,7 +7,7 @@ append content
 		.container
 			.row
 				.col-md-2.text-center
-					img.img-fluid.rounded-circle(src="https://unsplash.it/200")
+					img.img-fluid.rounded-circle(src='https://avatars1.githubusercontent.com/u/24349887')
 				.col-md-10.d-flex
 					div.align-self-center
 						h1.display-3 Anthony Somos
@@ -16,7 +16,13 @@ append content
 		.row
 			.col-md-6
 				//- Blurb
-				p.text-justify I am a full-stack JavaScript developer. After graduating from university I started a software marketplace for structural engineers. I learnt web development so that my company could survive, but along the way I became a passionate developer. Over the last six months I have gone from almost no experience to being proficient in Node, React, and MongoDB. For static websites, I have a lot of experience with server-rendered Pug. My favourite kinds of work include data ETL, writing elegant APIs, asynchronous code using newer ES6 syntax, and UI development with React.
+				p.text-justify I am a full-stack JavaScript developer. After graduating from university I started a software marketplace for structural engineers. I learnt web development so that my company could survive, but along the way I became a passionate developer. The company didn't end up making it, but it was a life changing experience that I would never regret. 
+				p.text-justify Today I am proficient in Node, React, and MongoDB. For static websites, I am an Express/Pug jedi . My favourite kinds of work include data ETL, writing elegant APIs, asynchronous code with ES6 syntax (async/await rocks), and UI development with React and Flux.
+				
+				p I am comfortable with:
+					em  React, Flux, Node, Express, MongoDB, Mongoose, Lodash, Moment, Pug/Jade.
+				p I am learning and excited about: 
+					em  Redis (espcially its pub/sub capabilities), micro-service architecture and message brokers, React with Redux. 
 				br
 
 				//- Education Section
@@ -43,15 +49,7 @@ append content
 					'McGill University, 2012',
 					'Worked with city officials on a project aimed at assessing the seismic vulnerability of Montréal’s emergency infrastructure.'
 				)
-				
-				//- Spoken Languages Section
-				+ResumeSection('I can speak')
-				+ResumeEntry('English, French, and Spanish.')
-				
-				//- Interests Section
-				+ResumeSection('Stuff I do on my free time')
-				+ResumeEntry('Coach little kids on weekends, play guitar, run, and code.')
-			
+
 			.col-md-6
 				//- Projects Section
 				+ResumeSection('Projects')
@@ -73,7 +71,15 @@ append content
 					null,
 					['Front-end: React/Flux, Semantic-UI','Back-end: Node/Express, MongoDB/Mongoose.','My favourite part: Transforming uploaded CSV to array of JSON with keys mapped to correct columns']
 				)
-				
+
+				//- Spoken Languages Section
+				+ResumeSection('I can speak')
+				+ResumeEntry('English, French, and Spanish.')
+
+				//- Interests Section
+				+ResumeSection('Stuff I do on my free time')
+				+ResumeEntry('Coach little kids on weekends, play guitar, run, and code.')
+
 				+ResumeSection('More Details')
 				a.btn.btn-outline-primary.mr-1(href='https://linkedin.com/in/anthony-somos-b475032b' target='_blank') LinkedIn
 				a.btn.btn-secondary(href='https://github.com/anthonyjonahs' target='_blank') GitHub
