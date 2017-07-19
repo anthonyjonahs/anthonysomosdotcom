@@ -5,4 +5,4 @@ I took the opportunity to mess around with Bootstrap 4 which is still in alpha r
 
 The site is deployed with Heroku and I used a third-party DNS service to route traffic from a custom domain. 
 
-You visit the site here: http://www.anthonysomos.com
+You can visit the site here: http://www.anthonysomos.com
