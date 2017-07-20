@@ -1,17 +1,21 @@
 extends layout.pug
 include ./mixins/ResumeEntry.pug
 include ./mixins/ResumeSection.pug
+include ./mixins/Navbar.pug
 
 append content
-	.jumbotron.jumbotron-fluid.pb-3.pt-3
+	.jumbotron.jumbotron-fluid.pb-3.pt-3.mb-0
 		.container
 			.row
 				.col-md-2.text-center
-					img.img-fluid.rounded-circle(src='https://avatars1.githubusercontent.com/u/24349887')
+					img.img-fluid.rounded-circle(style='border:3px solid #00d1b2' src='https://avatars1.githubusercontent.com/u/24349887')
 				.col-md-10.d-flex
 					div.align-self-center
 						h1.display-3 Anthony Somos
 						p.lead Full-Stack Web Developer
+	+Navbar
+	//- include ./Navbar.html
+					
 	.container
 		.row
 			.col-md-6
@@ -22,7 +26,7 @@ append content
 				p I am comfortable with:
 					em  React, Flux, Node, Express, MongoDB, Mongoose, Lodash, Moment, Pug/Jade.
 				p I am learning and excited about: 
-					em  Redis (espcially its pub/sub capabilities), micro-service architecture and message brokers, React with Redux. 
+					em  Redis (especially its pub/sub capabilities), micro-service architecture and message brokers, React with Redux. 
 				br
 
 				//- Education Section
@@ -63,13 +67,13 @@ append content
 					'CloudTrials App',
 					'A single page app where users could try PC-based software in their browser without installation.',
 					null,
-					['Front-end: React/Flux, Victory.js (data viz), Bootstrap.','Back-end: Node/Express, MongoDB, mySQL/Knex.','My favourite part: integrating app w/ third-party virtualization API to render a desktop in the browser - we blew some peoples\' minds with that!']
+					['Front-end: React/Flux, Victory.js (data viz), Bootstrap.','Back-end: Node/Express, MongoDB, mySQL/Knex.','My favourite part: Integrating app w/ third-party virtualization API to render a desktop in the browser - we blew some peoples\' minds with that!']
 				)
 				+ResumeEntry(	
 					'Invoicer',
 					'Web app for bulk emailing invoices to customers.',
 					null,
-					['Front-end: React/Flux, Semantic-UI','Back-end: Node/Express, MongoDB/Mongoose.','My favourite part: Transforming uploaded CSV to array of JSON with keys mapped to correct columns']
+					['Front-end: React/Flux, Semantic-UI.','Back-end: Node/Express, MongoDB/Mongoose.','My favourite part: Transforming uploaded CSV to array of JSON with keys mapped to correct columns']
 				)
 
 				//- Spoken Languages Section
@@ -79,7 +83,4 @@ append content
 				//- Interests Section
 				+ResumeSection('Stuff I do on my free time')
 				+ResumeEntry('Coach little kids on weekends, play guitar, run, and code.')
-
-				+ResumeSection('More Details')
-				a.btn.btn-outline-primary.mr-1(href='https://linkedin.com/in/anthony-somos-b475032b' target='_blank') LinkedIn
-				a.btn.btn-secondary(href='https://github.com/anthonyjonahs' target='_blank') GitHub
+				a.btn.btn-outline-primary.btn-block.mr-1(href='https://linkedin.com/in/anthony-somos-b475032b' target='_blank') Visit LinkedIn for more

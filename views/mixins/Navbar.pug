@@ -1,0 +1,16 @@
+mixin Navbar
+	nav.navbar.navbar-toggleable-md.navbar-light.mb-4.pb-0(style='background-color:#eceeef')
+		.container-fluid
+			button.navbar-toggler.navbar-toggler-right.pull-right(type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" style='margin-top:-2.5em')
+				span.navbar-toggler-icon
+			.collapse.navbar-collapse#navbarText
+				ul.navbar-nav.mr-auto
+					li.nav-item.mr-3(style='border-bottom:3px solid grey')
+						a.nav-link(href='mailto:anthony.somos@gmail.com') 
+							i.fa.fa-envelope-o 
+					li.nav-item.mr-3(style='border-bottom:3px solid grey')
+						a.nav-link(href='https://github.com/anthonyjonahs' target='_blank') 
+							i.fa.fa-github 
+					li.nav-item.mr-3(style='border-bottom:3px solid grey')
+						a.nav-link(href='https://linkedin.com/in/anthony-somos-b475032b' target='_blank') 
+							i.fa.fa-linkedin
